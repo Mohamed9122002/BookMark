@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CURDS curds " />
+    <meta name="keywords" content="Bookmark bookmark" />
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <main>
+        <section class="position-relative">
+            <div class="container d-flex  justify-content-center align-items-center flex-column ">
+                <h1 class="py-5 position-relative">Bookmarker</h1>
+                <div
+                    class="bookmark-body w-100  mt-5 py-5 d-flex  justify-content-center align-items-center flex-column gap-2">
+                    <h2>
+                        <i class="fa-solid fa-bookmark icon"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                    <div class="site-Name mb-3  w-100 ">
+                        <label for="siteName" class="form-label fw-bold "> <i class="fa-solid fa-book-bookmark "></i>
+                            SiteName</label>
+                        <input type="text" oninput="validationInputs(this)" class="form-control" id="siteName"
+                            placeholder="BookMarkName">
+                        <div class="alert d-none alert-danger py-1 mt-2">
+                            <small>Site name must contain at least 3 characters......</small>
+                        </div>
+                    </div>
+                    <div class="site-Url w-100 ">
+                        <label for="siteUrl" class="form-label fw-bold "> <i class="fa-solid fa-link "></i>
+                            SiteURL</label>
+                        <input type="url" oninput="validationInputs(this)" class="form-control" id="siteUrl"
+                            placeholder="Website URL">
+                        <div class="alert d-none alert-danger py-1 mt-2">
+                            <small>Site URL must be a valid one......</small>
+                        </div>
+                    </div>
+                    <button onclick="addBookMark()" class="btn btn-danger fw-bold px-5 mt-4"
+                        id="btnSubmit">Submit</button>
+                </div>
+                <table class="table mt-4 text-center  bg-light ">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize">Website Name</th>
+                            <th class="text-capitalize">Visit</th>
+                            <th class="text-capitalize">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContent"></tbody>
+
+                </table>
+            </div>
+            <div id="model"
+                class="box-info d-none  position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+                <div class="modal-content bg-white p-4 rounded-2 shadow-lg">
+                    <header class="modal-header w-100 d-flex justify-content-between align-items-center mb-4">
+                        <div class="circles d-flex">
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                        </div>
+                        <button class="btn btn-info border-0 fw-bold" id="closeBtn">
+                            X
+                        </button>
+                    </header>
+                    <p class="m-0 pb-2 ">
+                        Site Name or Url is not valid, Please follow the rules below :
+                    </p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            Site name must contain at least 3 characters
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            Site URL must be a valid one
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
