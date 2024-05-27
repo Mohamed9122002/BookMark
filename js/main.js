@@ -63,6 +63,7 @@ var deleteBookMark = function(index) {
   displayBookMark();
 };
 /* delete bookmark*/
+/* Updated Book Mark  */
 /* validation*/
 function validationInputs(element) {
   // console.log(element);
@@ -86,4 +87,3 @@ function validationInputs(element) {
 closeBtn.addEventListener("click", function() {
   boxModal.classList.add("d-none");
 });
-// 
