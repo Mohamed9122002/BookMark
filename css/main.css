@@ -1,6 +1,8 @@
+body{
+    background-color: #f7ecde;
+}
 section{
     height: 100vh;
-    background-color: #f7ecde;
 }
 
 section h1 {
