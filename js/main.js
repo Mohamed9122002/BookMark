@@ -63,6 +63,7 @@ var deleteBookMark = function(index) {
   displayBookMark();
 };
 /* delete bookmark*/
+// updated bokkmark 
 /* validation*/
 function validationInputs(element) {
   // console.log(element);
